@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import org.apache.commons.lang3.StringUtils;
 
 
 public class Main {
@@ -16,6 +17,18 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter input");
         String userInput = scanner.nextLine();
+
+
+//        STRING UTIL
+
+        if (StringUtils.isNumeric(userInput)){
+            System.out.println(userInput + " is a number ");
+        }else
+            System.out.println("This is a string");
+
+           System.out.println(StringUtils.swapCase(userInput));
+           System.out.println(StringUtils.reverse(userInput));
+
 
 
       if(isNumber(userInput)){
